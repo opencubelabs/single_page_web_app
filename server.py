@@ -37,7 +37,7 @@ def test():
 	cur = db.test.find()
 	data = json.loads(dumps(cur))
 
-	return data
+	return dumps(cur)
 
 
 

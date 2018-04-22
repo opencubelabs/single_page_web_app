@@ -30,11 +30,12 @@ def root():
 
 @app.route('/hello/<name>')
 def hello(name):
+	cur = db.test.insert({'name': name})
 	return "Hello, "+name
 
 @app.route('/test')
 def test():
-	cur = db.test.insert({'name': 'Test from server'})
+	
 	cur = db.test.find()
 	raw_dump = dumps(cur)
 	data = json.loads(raw_dump)

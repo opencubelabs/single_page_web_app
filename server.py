@@ -13,8 +13,8 @@ import os
 
 app = Bottle(__name__)
 
-client = MongoClient('mongodb://heroku_dt20r14q:bk182pd4c77g039mchi890mc0e@ds253918.mlab.com:53918/heroku_dt20r14q')
-db = client.heroku_dt20r14q
+client = MongoClient('mongodb://heroku_rm1l8fcm:l7a6ba5r71tvl8rqujfpui5113@ds157653.mlab.com:57653/heroku_rm1l8fcm')
+db = client.heroku_rm1l8fcm
 
 # HOST = 'https://toteyes.herokuapp.com/'
 HOST = 'http://localhost:8083/'
@@ -32,6 +32,12 @@ def root():
 def hello(name):
 	return "Hello, "+name
 
+@app.route('/test')
+def test():
+	cur = db.test.find()
+	data = json.loads(dumps(cur))
+
+	return data
 
 
 

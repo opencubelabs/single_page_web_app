@@ -28,6 +28,10 @@ def root():
 
 	return "Hey there!! :D"
 
+@app.route('/hello/<name>')
+def hello(name):
+	return "Hello, "+name
+
 
 
 

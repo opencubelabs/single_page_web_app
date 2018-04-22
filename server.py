@@ -24,7 +24,9 @@ def root():
 	# if(str(request.get_cookie('tot_token')) == 'tot_token_value'):
 	# 	return '<h1>toteyes home</h1>'
 	# else:
-	return static_file('index.html', root='templates/')
+	# return static_file('index.html', root='templates/')
+
+	return "Hey there!! :D"
 
 
 

@@ -37,7 +37,8 @@ def test():
 	cur = db.test.insert({'name': 'Test from server'})
 	cur = db.test.find()
 	data = json.loads(dumps(cur))
-	print('################ ' + data)
+	print('################ ')
+	print(data)
 	return dumps(cur)
 
 

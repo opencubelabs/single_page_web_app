@@ -36,10 +36,11 @@ def hello(name):
 def test():
 	cur = db.test.insert({'name': 'Test from server'})
 	cur = db.test.find()
-	data = json.loads(dumps(cur))
+	raw_dump = dumps(cur)
+	data = json.loads(raw_dump)
 	print('################ ')
 	print(data)
-	return dumps(cur)
+	return raw_dump
 
 
 
